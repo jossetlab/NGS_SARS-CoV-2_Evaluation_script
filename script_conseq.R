@@ -129,7 +129,7 @@ for (i in 1:24){
     list_seq<-read.dna("test_extract.fasta", format = "fasta",
                        as.character = FALSE, as.matrix = NULL)
     mat_dist<-dist.dna(list_seq, model = "N", variance = FALSE,
-                       gamma = FALSE, pairwise.deletion = FALSE,
+                       gamma = FALSE, pairwise.deletion = TRUE,
                        base.freq = NULL, as.matrix = TRUE)
     mat_dist<-fillMatrix(mat_dist)
     list_MATRIX[[i]]<-mat_dist
